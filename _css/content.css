@@ -1,0 +1,54 @@
+
+.has-top-margin {
+  /* this class is given - using jQuery - to the .cd-main-content following the .cd-secondary-nav when it becomes fixed */
+}
+
+@media only screen and (--medium-up) {
+  .has-top-margin {
+    animation-name: animate-margin-top;
+    -moz-animation-name: animate-margin-top;
+    -webkit-animation-name: animate-margin-top;
+    animation-duration: 0.3s;
+    -moz-animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    margin-top: 6em;
+  }
+}
+
+@-webkit-keyframes animate-margin-top {
+  0% {
+      margin-top: 0em;
+  }
+
+  100% {
+  margin-top: 6em;
+  }
+}
+@-moz-keyframes animate-margin-top {
+  0% {
+  margin-top: 0em;
+  }
+
+  100% {
+    margin-top: 6em;
+  }
+}
+
+@keyframes animate-margin-top {
+  0% {
+      margin-top: 0em;
+  }
+
+  100% {
+    margin-top: 6em;
+  }
+}
+
+
+
+.section {
+  padding: 2em;
+  position: relative;
+  clear: both;
+  /*margin: 4em 0;*/
+}

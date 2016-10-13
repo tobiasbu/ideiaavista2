@@ -1,0 +1,21 @@
+# main links
+main:
+  - title: "Quem Somos"
+    url: about.md
+    content: true
+
+  - title: "Games"
+    url: games.md
+    content: true
+
+  - title: "Audiovisual"
+    url: cinema.md
+    content: true
+
+  - title: "Contato"
+    url: contact.md
+    content: true
+
+  #- title: "Estúdio Virtual"
+  #  url: estudio.md
+  #  content: false
