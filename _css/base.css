@@ -1,7 +1,7 @@
 
 :root {
-  background: #526375;
-  color: #FFF;
+  background: #fff;
+  color: #000;
   font-family: 'Titillium Web', sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -27,7 +27,7 @@ p {
 
 a {
   text-decoration:none;
-  color: #fff;
+  color: #000;
   /*&:hover{
     color: #0A0A0A;
   }*/
@@ -48,7 +48,8 @@ h3 {
 }
 
 .brand-wrapper {
-  height: 85vh;
+  overflow: hidden;
+  height: 100%;
   width: 100%;
   justify-content: center;
 
@@ -57,17 +58,51 @@ h3 {
   }
 }
 
-.brand-logo {
+.brand {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  padding: calc(100vh/2 - 210px) 2em;
+  line-height: 0;
+}
 
+.brand h1 {
+  text-indent: -9999px;
+  margin: auto;
+  max-width: 600px;
+  height: 276px;
+  background: url('img/brand-svg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+    @media (--medium-down) {
+      max-height: 400px;
+      min-height: 176px;
+      height: auto;
+    }
+}
+
+.brand p {
+  letter-spacing: 2px;
+  color: #fff;
+  font-weight: 600;
+  margin: 2em 0;
+  line-height: 1.15em;
+}
+
+.brand-logo {
+  position: absolute;
+  z-index: 5;
   background-repeat: no-repeat;
   background-position: 0;
   display: block;
   background-image: url('img/brand_logo.png');
 
+
+
   @media (--medium-up) {
-    width: 523px;
-    height: 252px;
-    margin: calc(85vh/2 - 252px/2) auto;
+    width: 623px;
+    height: 300px;
+    margin: calc(100vh/2 - 300px/2 - 1em) auto;
   }
 
   @media (--medium-down) {
@@ -80,6 +115,7 @@ h3 {
 }
 
 .brand-bg {
+
   position: absolute;
   top: 0;
   left: 0;

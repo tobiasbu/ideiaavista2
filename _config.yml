@@ -11,9 +11,10 @@ email: flamenco.bluegrass@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   rodapé (c) Ideia a Vista... 2016
 author: Tobias B. Ulrich
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://ideiaavista.com.br" # the base hostname & protocol for your site
 
+repository: "tobiasbu/ideiaavista2"
 
 # Build settings
 markdown: kramdown

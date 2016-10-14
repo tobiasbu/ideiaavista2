@@ -1,7 +1,7 @@
 {
-  "name": "ideiaavista",
+  "name": "ideiaavista2",
   "version": "1.0.0",
-  "description": "Ideia a Vista website ",
+  "description": "Ideia a Vista website 2",
   "main": "index.js",
   "dependencies": {
     "normalize.css": "^4.1.1",
