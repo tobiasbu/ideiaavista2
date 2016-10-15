@@ -3,21 +3,26 @@ layout: default
 ---
 
 <main class="site-content">
-
+<div class="wrapper">
 {% assign nav = site.data.nav["main"] %}
 {% for item in nav %}
+
 {% if !item.content %}
-<section id="{{item.url | remove: ".md" }}" class="section">
+{% if item.title != "Contato"  %}
+  <section id="{{item.url | remove: ".md" }}" class="section">
   <h3>{{item.title}}</h3>
     {% capture test %}{% include_relative _sections/{{item.url}} %}{% endcapture %}
     {{ test |  markdownify}}
-  </section>
+    </section>
+  {% endif %}
+
   {% endif %}
 {% endfor %}
+ </div>
 </main>
 
 <!--><div class="section"><!-->
-<!-->  </div><!-->
+<!-->    <!-->
 
   <!--> <ul class="post-list">
     {% for post in site.posts %}

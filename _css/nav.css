@@ -13,9 +13,9 @@ background-color: #526375;
   right: 4%;
   bottom: 3%;
   border-radius: 0.25em;
-  background: rgba(3, 13, 24, 0.96);
+  background: rgba(4, 10, 26, 0.97);
   visibility: hidden;
-  z-index: 1;
+  z-index: 10;
   webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transform: scale(0);
@@ -31,6 +31,7 @@ background-color: #526375;
   -webkit-transition: -webkit-transform 0.3s, visibility 0s 0.3s;
   -moz-transition: -moz-transform 0.3s, visibility 0s 0.3s;
   transition: transform 0.3s, visibility 0s 0.3s;
+
 }
 
 #nav ul.is-visible {
@@ -49,7 +50,7 @@ background-color: #526375;
   display: block;
   padding: 1.6em;
   border-bottom: 1px solid #092645;
-  color: #000;
+  color: #fff;
 }
 
 #nav li:last-child a {
@@ -119,6 +120,15 @@ background-color: #526375;
   display: inline;
   padding-left: 1em;
   padding-right: 1em;
+
+}
+
+/*#nav li:first-child {
+  padding-left: 0;
+}*/
+
+#nav li a {
+  color: #000;
 }
 
 #nav li.studio {
@@ -129,7 +139,7 @@ background-color: #526375;
 #nav li.studio a {
 
   &:hover {
-    color: #fff;
+    color: #1c2a69;
   }
 }
 
@@ -146,11 +156,12 @@ background-color: #526375;
 
 #nav a.active {
   opacity: 1;
+  color: #1c2a69;
 }
 
 }
 
-@media only screen and (min-width: 1165px) {
+@media only screen and (min-width: 1372px) {
   .nav-logo {
     clear: both;
     position: absolute;
@@ -159,7 +170,7 @@ background-color: #526375;
     opacity: 0.65;
     left: -10%;
     display: block;
-    z-index: 5;
+    z-index: 10;
     background-image: url("img/coruja48.png");
     width: 48px;
     height: 48px;
@@ -204,9 +215,9 @@ background-color: #526375;
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  z-index: 2;
-  box-shadow: 0px 8px 10px rgba(0,0,0,0.5);
-  background-color: #526375;
+  z-index: 12;
+  box-shadow: -1px 2px 5px rgba(0,0,0,0.45);
+  background-color: #1C2A69;
   border-top: 1px solid rgba(159,176,201,0.3);
   opacity: 0.95;
   line-height: 0;

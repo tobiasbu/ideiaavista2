@@ -69,7 +69,7 @@
 	//	taglineOffesetTop = $('#cd-intro-tagline').offset().top + $('#cd-intro-tagline').height() + parseInt($('#cd-intro-tagline').css('paddingTop').replace('px', '')),
 		contentSections = $('.section');
 		var insideNav = nav.find('#nav');
-var topPos = $('.brand').offset().top+$('.brand').height()/2;
+var topPos = $('.brand').offset().top+$('.brand').height();
 		var navlogo = $('.nav-logo');
 
 
@@ -183,12 +183,44 @@ function scaleVideoContainer() {
     $('.title').css('height',unitHeight);
 		$('.title').css('width',unitWidth);
 
-		var brand = $('.brand');
-		var hbrand = parseInt((height - brand.height())/2).toString() + "px 2em";
+		var brand; //= $('.brand-holder');
+		var hbrand;
 
-		console.log(hbrand);
+	/*	if (brand.width() < 56*16) {
+			brand.removeAttr( 'style' );
+				hbrand = parseInt(brand.width() * 256 / 600);
+
+				brand.css('height',hbrand)
+		}*/
+
+		// resize brand
+		brand = $('.brand');
+	 hbrand = parseInt((height - brand.height())/2).toString() + "px 2em";
 
 		brand.css('padding',hbrand);
+
+		brand = $('#about');
+		var r = (height - brand.height()) / 2;
+
+		if (r < 32) {
+			hbrand= "3em 0";
+
+		} else {
+				//hbrand = "1em";
+					hbrand = parseInt(r).toString() + "px 0";
+		}
+			brand.css('padding',hbrand);
+
+		// brand holder
+		// 600px - 256px
+
+
+
+		//
+		//} else {
+		//		brand.css('width',280)
+		//		brand.css('height',119)
+		//}
 
 }
 

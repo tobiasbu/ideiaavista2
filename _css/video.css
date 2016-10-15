@@ -1,6 +1,6 @@
 
 .title {
-  position: relative;
+
 }
 
 /*video {
@@ -14,8 +14,12 @@
   background-size: cover;
 }*/
 
+video {
+  max-width: 100%    !important;
+  height: auto   !important;
+}
 
-.video-container {
+.video-header {
   position: absolute;
   bottom: 0%;
   left: 0%;
@@ -23,17 +27,22 @@
   width: 100%;
   overflow: hidden;
   background: #000;
-}
-
-.video-container video {
-  position: absolute;
-  z-index: 0;
   background-size: cover;
   background-position: 50% 50%;
-
-/*  bottom: 0;*/
+  background-image:url('img/mobile_brand_bg.png');
+    z-index: -3;
 }
-.video-container video.fillWidth {
+
+.video-header video {
+  position: absolute;
+  z-index: 0;
+
+  @media (--medium-down) {
+      display: none !important;
+    }
+
+}
+.video-header video.fillWidth {
   min-width: 100%;
   min-height: 100%;
   width: auto;
@@ -45,10 +54,11 @@
   -moz-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   -o-transform: translate(-50%,-50%);
+  z-index: -2;
 }
 
-.video-container .filter {
-  z-index: 1;
+.filter {
+  z-index: -1;
   position: absolute;
   background: rgba(0, 0, 0, 0.4);
   background-image: url('img/filter.png');

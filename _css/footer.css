@@ -1,4 +1,29 @@
 
+
+
 .site-footer {
-  margin: 6em auto;
+      margin-top: 6em;
+  position: relative;
+
+}
+
+
+.site-footer::after {
+  content: "";
+  background-image: url('img/footer_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+}
+
+.legal {
+  color: #bababa;
+  font-size: 0.825rem;
+  padding: 1em 0;
 }

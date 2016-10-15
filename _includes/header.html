@@ -9,19 +9,20 @@
         </a>
       <div class="wrapper">
       <nav id="nav">
-      <a href="#0" class="nav-trigger">Menu<span></span></a>
-      <ul>
-        {% assign nav = site.data.nav["main"] %}
-        {% for item in nav %}
-        {% if item.content == false %}
-        <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ item.title }}</a></li>
-        {% else %}
-        <li><a href="#{{item.url | remove: ".md"}}">{{ item.title }}</a></li>
-        {% endif %}
-        {% endfor %}
 
-        <li class="studio"><a href="http://ideiaestudiovirtual.com.br/" target="_blank">Estúdio Virtual</a></li>
-      </ul>
+        <a href="#0" class="nav-trigger">Menu<span></span></a>
+        <ul>
+            {% assign nav = site.data.nav["main"] %}
+              {% for item in nav %}
+                {% if item.content == false %}
+                  <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ item.title }}</a></li>
+                {% else %}
+                  <li><a href="#{{item.url | remove: ".md"}}">{{ item.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+            <li class="studio"><a href="http://ideiaestudiovirtual.com.br/" target="_blank">Estúdio Virtual</a></li>
+        </ul>
+
     </nav>
         </div>
     </div>
@@ -40,19 +41,24 @@
   </div>
     </div><!-->
 <div class="title">
-
-<div class="video-container">
-  <div class="filter"></div>
-    <video class="fillWidth" poster="img/showreel_poster.jpg" autoplay loop muted>
-        <!--><source type="video/mp4" src="videos/showreel.mp4"><!-->
-    <source type="video/webm;" src="videos/showreel.webm">
-    </video>
-</div>
-<div class="wrapper">
-    <div class="brand">
-        <a href="{{ site.baseurl }}/"><h1>{{site.title}}</h1></a>
-        <p>Uma produtora de cinema e vídeo games.</p>
-    </div>
+  <div class="video-header">
+    <div class="filter"></div>
+      <video class="fillWidth" poster="img/showreel_poster.jpg" autoplay loop muted>
+          <!--><source type="video/mp4" src="videos/showreel.mp4"><!-->
+      <source type="video/webm;" src="videos/showreel.webm">
+      </video>
+  </div>
+  <div class="wrapper">
+      <div class="brand">
+          <div class="brand-holder">
+            <a href="{{ site.baseurl }}/">
+              <h1>{{site.title}}</h1>
+            </a>
+              <img src="img/brand_logo2.png">
+            </div>
+          <p>Uma produtora de cinema e vídeo games.</p>
+      </div>
+  </div>
 </div>
 
 

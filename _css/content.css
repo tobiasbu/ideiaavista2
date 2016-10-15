@@ -1,6 +1,44 @@
 
-.has-top-margin {
-  /* this class is given - using jQuery - to the .cd-main-content following the .cd-secondary-nav when it becomes fixed */
+.section {
+  position: relative;
+  clear: both;
+}
+
+.section .row {
+  display: flex;
+  @media (--medium-down) {
+  display: block;
+}
+
+}
+
+.section .col {
+  display: inline-block;
+  float: left;
+  width: 68%;
+  margin-right: 4%;
+  @media (--medium-down) {
+    display: block;
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.section .col-img {
+
+  margin: auto;
+  width: 44%;
+
+    @media (--medium-down) {
+      width: 100%;
+      text-align: center;
+    }
+
+}
+
+/*.has-top-margin {
+  /* this class is given - using jQuery - to the .cd-main-content following the .cd-secondary-nav when it becomes fixed
 }
 
 @media only screen and (--medium-up) {
@@ -43,12 +81,4 @@
     margin-top: 6em;
   }
 }
-
-
-
-.section {
-  padding: 2em;
-  position: relative;
-  clear: both;
-  /*margin: 4em 0;*/
-}
+*/
