@@ -1,10 +1,25 @@
-<footer class="site-footer">
+<footer class="site-footer" id="contact">
 <div class="filter"></div>
 
+  <div class="inner-footer">
   <div class="wrapper">
 
+    <h3>Contato</h3>
+
+    <div class="row">
+      <div class="col">
+        {% capture test %}{% include_relative _sections/contact_games.md %}{% endcapture %}
+        {{ test |  markdownify}}
+      </div>
+      <div class="col">
+        {% capture test %}{% include_relative _sections/contact_cinema.md %}{% endcapture %}
+        {{ test |  markdownify}}
+      </div>
+    </div>
     <div class="legal">
-    Copyright © 2016 . Ideia a Vista . Todos os direitos reservados 
+    Copyright © 2016 . Ideia a Vista . Todos os direitos reservados
+    </div>
+    </div>
     </div>
 
 <!--
@@ -25,6 +40,5 @@
     </div>
   -->
 
-  </div>
 
 </footer>

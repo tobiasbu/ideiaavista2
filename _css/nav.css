@@ -1,11 +1,13 @@
 
 .nav-container {
 
-background-color: #526375;
+/*background-color:transparent;*/
+
 
 }
 
 #nav ul {
+  font-weight: 600;
   /* mobile first - secondary navigation hidden by default, triggered by tap/click on .cd-secondary-nav-trigger*/
   position: fixed;
   width: 90%;
@@ -123,9 +125,9 @@ background-color: #526375;
 
 }
 
-/*#nav li:first-child {
+#nav li:first-child {
   padding-left: 0;
-}*/
+}
 
 #nav li a {
   color: #000;
@@ -136,12 +138,12 @@ background-color: #526375;
   display: block;
 }
 
-#nav li.studio a {
+/*#nav li.studio a {
 
   &:hover {
     color: #1c2a69;
   }
-}
+}*/
 
 #nav li a {
   color: #000;

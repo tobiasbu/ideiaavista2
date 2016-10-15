@@ -183,8 +183,8 @@ function scaleVideoContainer() {
     $('.title').css('height',unitHeight);
 		$('.title').css('width',unitWidth);
 
-		var brand; //= $('.brand-holder');
-		var hbrand;
+
+
 
 	/*	if (brand.width() < 56*16) {
 			brand.removeAttr( 'style' );
@@ -194,22 +194,28 @@ function scaleVideoContainer() {
 		}*/
 
 		// resize brand
-		brand = $('.brand');
-	 hbrand = parseInt((height - brand.height())/2).toString() + "px 2em";
+		var brand = $('.brand');
+	 	var sec_height = parseInt((height - brand.height())/2).toString() + "px 2em";
 
-		brand.css('padding',hbrand);
+		brand.css('padding',sec_height);
 
-		brand = $('#about');
-		var r = (height - brand.height()) / 2;
+		// resize sections
+		var sections = [ $('#about'),  $('#games'),  $('#cinema') ];
 
-		if (r < 32) {
-			hbrand= "3em 0";
+		for (var i = 0; i < sections.length; i++) {
 
-		} else {
-				//hbrand = "1em";
-					hbrand = parseInt(r).toString() + "px 0";
+				var r = (height - sections[i].height()) / 2;
+
+				if (r < 32) {
+					sec_height= "3em 0";
+
+				} else {
+						//hbrand = "1em";
+							sec_height = parseInt(r).toString() + "px 0";
+				}
+					sections[i].css('padding',sec_height);
+
 		}
-			brand.css('padding',hbrand);
 
 		// brand holder
 		// 600px - 256px

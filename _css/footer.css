@@ -2,9 +2,9 @@
 
 
 .site-footer {
-      margin-top: 6em;
+  margin-top: 3rem;
   position: relative;
-
+  color: #ececec
 }
 
 
@@ -22,8 +22,35 @@
   z-index: -2;
 }
 
+.inner-footer {
+  padding-top: 4em;
+}
+
+.site-footer .row {
+    display: flex;
+    margin-bottom: 3.5em;
+    font-size: 0.85em;
+}
+
+.site-footer .col {
+  width: 48%;
+}
+
+.site-footer .col:first-child{
+  margin-right: 4%;
+}
+
+.site-footer h2 {
+  font-size: 1.15em;
+  margin-bottom: 1em;
+}
+
+.site-footer address {
+  font-style: normal;
+  line-height: 2em;
+}
+
 .legal {
-  color: #bababa;
-  font-size: 0.825rem;
-  padding: 1em 0;
+  font-size: 0.85rem;
+  padding: 1.5em 0;
 }
