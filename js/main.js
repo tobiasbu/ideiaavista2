@@ -1,51 +1,11 @@
-/*jQuery(function( $ ) {
-	//
-	 // Demo binding and preparation, no need to read this part
-	 //
-		//borrowed from jQuery easing plugin
-		//http://gsgd.co.uk/sandbox/jquery.easing.php
-		$.easing.elasout = function(x, t, b, c, d) {
-		//	var s=1.70158;var p=0;var a=c;
-		//	if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
-		//	if (a < Math.abs(c)) { a=c; var s=p/4; }
-	//		else var s = p/(2*Math.PI) * Math.asin (c/a);
-	//		return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
-			if ((t/=d/2) < 1) return c/2*t*t*t*t + b;
-		return -c/2 * ((t-=2)*t*t*t - 2) + b;
-		};
-		$('a.back').click(function() {
-			$(this).parents('div.pane').scrollTo(0, 800, { queue:true });
-			$(this).parents('div.section').find('span.message').text( this.title);
-			return false;
-		});
-		//just for the example, to stop the click on the links.
-		$('ul.links').click(function(e){
-			var link = e.target;
-			if (link.target === '_blank') {
-				return;
-			}
-			e.preventDefault();
-			link.blur();
-			if (link.title) {
-				$(this).parent().find('span.message').text(link.title);
-			}
-		});
-
-	// This one is important, many browsers don't reset scroll on refreshes
-	// Reset all scrollable panes to (0,0)
-	$('div.pane').scrollTo(0);
-	// Reset the screen to (0,0)
-	$.scrollTo(0);
-
-	// TOC, shows how to scroll the whole window
-	$('#nav a').click(function() {//$.scrollTo works EXACTLY the same way, but scrolls the whole screen
-		$.scrollTo(this.hash, 1500, { easing:'elasout' });
-		$(this.hash).find('span.message').text(this.title);
-		return false;
-	});
-});*/
 
 	jQuery(document).ready(function($) {
+
+		var body = $( "body" ),
+			content = $( '.content-wrap' ),
+			openbtn = $( '#open-button' ),
+			closebtn = $( '#close-button' ),
+			menuIsOpen = false;
 
 		// Resive video
 	scaleVideoContainer();
@@ -56,8 +16,6 @@
 
 	$(window).on('resize', function() {
 			scaleVideoContainer();
-
-
 			//scaleBannerVideoSize('.video-container .poster img');
 			//scaleBannerVideoSize('.video-container .filter');
 			//scaleBannerVideoSize('.video-container video');
@@ -87,9 +45,6 @@ var topPos = $('.brand').offset().top+$('.brand').height();
 			//push the .cd-main-content giving it a top-margin
 		//	$('.site-content').addClass('has-top-margin');
 
-
-
-
 			//on Firefox CSS transition/animation fails when parent element changes position attribute
 			//so we to change secondary navigation childrens attributes after having changed its position value
 			setTimeout(function() {
@@ -110,12 +65,13 @@ var topPos = $('.brand').offset().top+$('.brand').height();
 		}
 
 		//on desktop - update the active link in the secondary fixed navigation
-
 			updateSecondaryNavigation();
-		}
+	}
 
 
-	});
+
+
+});
 
 	function updateSecondaryNavigation() {
 
@@ -145,11 +101,54 @@ var topPos = $('.brand').offset().top+$('.brand').height();
 		});
 	}
 
+	/*function init() {
+		initEvents();
+	}
+
+	function initEvents() {
+		openbtn.addEventListener( 'click', toggleMenu );
+		if( closebtn ) {
+			closebtn.addEventListener( 'click', toggleMenu );
+		}
+
+		// close the menu element if the target itÂ´s not the menu element or one of its descendants..
+		content.addEventListener( 'click', function(ev) {
+			var target = ev.target;
+			if( isOpen && target !== openbtn ) {
+				toggleMenu();
+			}
+		} );
+	}
+
+
+
+	init();*/
+
+	var button = $('.nav-button');
+
+	function toggleMenu() {
+
+		if( menuIsOpen ) {
+
+			body.addClass( 'show-menu' );
+			insideNav.find('ul').addClass('show-menu');
+			$(button).addClass('show-menu');
+		}
+		else {
+			body.removeClass( 'show-menu' );
+			insideNav.find('ul').removeClass('show-menu');
+			$(button).removeClass('show-menu');
+		}
+
+
+
+		menuIsOpen = !menuIsOpen;
+	}
+
 	//on mobile - open/close secondary navigation clicking/tapping the .cd-secondary-nav-trigger
-	$('.nav-trigger').on('click', function(event){
-		event.preventDefault();
-		$(this).toggleClass('menu-is-open');
-		nav.find('ul').toggleClass('is-visible');
+	button.on('click', function(event){
+		/*event.preventDefault();*/
+		toggleMenu();
 	});
 
 	//smooth scrolling when clicking on the secondary navigation items
@@ -161,7 +160,7 @@ var topPos = $('.brand').offset().top+$('.brand').height();
 				if($(event.target).prop('target').length){
 					var productLink = $(event.target);
 
-					console.log(productLink.prop("href"));
+					//console.log(productLink.prop("href"));
 
 				/*	productLink.attr("target", "_blank");*/
 					window.open(productLink.prop("href"));
@@ -185,6 +184,7 @@ var topPos = $('.brand').offset().top+$('.brand').height();
 		if($(event.target).is('.cd-primary-nav')) $(this).children('ul').toggleClass('is-visible');
 	});
 });
+
 
 /** Reusable Functions **/
 /********************************************************************/

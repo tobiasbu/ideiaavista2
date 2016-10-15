@@ -10,7 +10,27 @@
 @custom-media --medium-up (width > 55em);
 @custom-media --medium-down (width <= 55em);
 
+html,
+body,
+.container,
+.content-wrap {
+  outline:none;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.content-wrap {
+  overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	-webkit-transition: -webkit-transform 0.4s;
+	transition: transform 0.4s;
+	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
 body {
+
   font-size: 1.3em;
   line-height: 1.833em;
 
@@ -20,7 +40,6 @@ body {
   }
 }
 
-
 p {
   margin: 1.5em 0;
 }
@@ -28,9 +47,20 @@ p {
 a {
   text-decoration:none;
   color: #000;
+  outline: 0;
+
   /*&:hover{
     color: #0A0A0A;
   }*/
+}
+
+a:hover, a:active, a:focus {
+  /* styling for any way a link is about to be used */
+  outline: 0;
+}
+
+button::-moz-focus-inner {
+  border: 0;
 }
 
 h3 {
