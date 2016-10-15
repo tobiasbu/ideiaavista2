@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ideia a Vista</title>
-    <description>Ideia a Vista. Uma produtora de cinema e games.
+    <title>Ideia à Vista</title>
+    <description>Uma produtora de cinema e games.
 </description>
-    <link>https://tobiasbu.github.io/ideiaavista2//</link>
-    <atom:link href="https://tobiasbu.github.io/ideiaavista2//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 15 Oct 2016 00:34:17 -0300</pubDate>
-    <lastBuildDate>Sat, 15 Oct 2016 00:34:17 -0300</lastBuildDate>
+    <link>https://tobiasbu.github.io/ideiaavista2/</link>
+    <atom:link href="https://tobiasbu.github.io/ideiaavista2/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 15 Oct 2016 01:10:40 -0300</pubDate>
+    <lastBuildDate>Sat, 15 Oct 2016 01:10:40 -0300</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
   </channel>
