@@ -6,13 +6,13 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Ideia a Vista
+title: Ideia à Vista
 email: flamenco.bluegrass@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  rodapé (c) Ideia a Vista... 2016
+  Uma produtora de cinema e games.
 author: Tobias B. Ulrich
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://ideiaavista.com.br" # the base hostname & protocol for your site
+url: "https://tobiasbu.github.io/ideiaavista2" #"http://ideiaavista.com.br" # the base hostname & protocol for your site
 
 repository: "tobiasbu/ideiaavista2"
 

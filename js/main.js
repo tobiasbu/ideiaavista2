@@ -68,6 +68,7 @@
 			navTopPosition = nav.offset().top,
 	//	taglineOffesetTop = $('#cd-intro-tagline').offset().top + $('#cd-intro-tagline').height() + parseInt($('#cd-intro-tagline').css('paddingTop').replace('px', '')),
 		contentSections = $('.section');
+
 		var insideNav = nav.find('#nav');
 var topPos = $('.brand').offset().top+$('.brand').height();
 		var navlogo = $('.nav-logo');
@@ -79,7 +80,7 @@ var topPos = $('.brand').offset().top+$('.brand').height();
 		/*( $(window).scrollTop() > taglineOffesetTop ) ? $('#cd-logo, .cd-btn').addClass('is-hidden') : $('#cd-logo, .cd-btn').removeClass('is-hidden');*/
 
 		//on desktop - fix secondary navigation on scrolling
-		if ( $( window ).width() > 52 * 16 ) {
+		if ( $( window ).width() > 55 * 16 ) {
 		if($(window).scrollTop() > topPos ) {
 			//fix secondary navigation
 			//nav.addClass('is-fixed');
@@ -117,16 +118,30 @@ var topPos = $('.brand').offset().top+$('.brand').height();
 	});
 
 	function updateSecondaryNavigation() {
+
+		var plusValue = 0;
+		var minusValue = 0;
+
 		contentSections.each(function(){
 			var actual = $(this),
 				actualHeight = actual.height() + parseInt(actual.css('paddingTop').replace('px', '')) + parseInt(actual.css('paddingBottom').replace('px', '')),
 				actualAnchor = insideNav.find('a[href="#'+actual.attr('id')+'"]');
-			//	console.log(actual);
-			if ( ( actual.offset().top - nav.height() <= $(window).scrollTop() ) && ( actual.offset().top +  actualHeight - nav.height() > $(window).scrollTop() ) ) {
-				actualAnchor.addClass('active');
-			}else {
-				actualAnchor.removeClass('active');
-			}
+
+				if (actual.attr("id") == "contact") {
+					plusValue = -parseInt($( window ).height() / 2);
+				} else if (actual.attr("id") == "cinema") {
+						minusValue = -parseInt($( window ).height() / 2);
+				}
+
+
+				//	console.log(actual);
+				if ( ( actual.offset().top+plusValue - nav.height() <= $(window).scrollTop() )
+				&& ( actual.offset().top +  actualHeight+minusValue - nav.height() > $(window).scrollTop() ) ) {
+					actualAnchor.addClass('active');
+				}else {
+					actualAnchor.removeClass('active');
+				}
+
 		});
 	}
 

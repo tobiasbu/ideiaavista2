@@ -13,7 +13,7 @@ main:
     content: true
 
   - title: "Contato"
-    url: contact.html
+    url: contact.md
     content: true
 
   #- title: "Estúdio Virtual"
