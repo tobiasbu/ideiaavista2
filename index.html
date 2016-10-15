@@ -3,6 +3,9 @@ layout: default
 ---
 
 <main class="site-content">
+
+{% include header.html %}
+
 <div class="wrapper">
 {% assign nav = site.data.nav["main"] %}
 {% for item in nav %}
@@ -15,10 +18,11 @@ layout: default
     {{ test |  markdownify}}
     </section>
   {% endif %}
-
-  {% endif %}
+    {% endif %}
 {% endfor %}
  </div>
+
+ {% include footer.html %}
 </main>
 
 <!--><div class="section"><!-->

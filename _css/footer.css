@@ -4,7 +4,8 @@
 .site-footer {
   margin-top: 3rem;
   position: relative;
-  color: #ececec
+  color: #ececec;
+  min-height: 36em;
 }
 
 
@@ -23,7 +24,7 @@
 }
 
 .inner-footer {
-  padding-top: 4em;
+  padding-top: 6.25em;
 }
 
 .site-footer .row {
@@ -51,6 +52,8 @@
 }
 
 .legal {
+  position: absolute;
+  bottom: 0%;
   font-size: 0.85rem;
   padding: 1.5em 0;
 }

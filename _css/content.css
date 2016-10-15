@@ -1,4 +1,20 @@
 
+.title {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.site-content {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: auto;
+  z-index: 3;
+  background: #fff;
+}
+
 .section {
   position: relative;
   clear: both;
