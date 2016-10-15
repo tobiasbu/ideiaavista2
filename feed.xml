@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ideia a Vista</title>
-    <description>rodapé (c) Ideia a Vista... 2016
+    <description>Ideia a Vista. Uma produtora de cinema e games.
 </description>
-    <link>http://ideiaavista.com.br/</link>
-    <atom:link href="http://ideiaavista.com.br/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 15 Oct 2016 00:27:32 -0300</pubDate>
-    <lastBuildDate>Sat, 15 Oct 2016 00:27:32 -0300</lastBuildDate>
+    <link>https://tobiasbu.github.io/ideiaavista2//</link>
+    <atom:link href="https://tobiasbu.github.io/ideiaavista2//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 15 Oct 2016 00:34:17 -0300</pubDate>
+    <lastBuildDate>Sat, 15 Oct 2016 00:34:17 -0300</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
   </channel>
