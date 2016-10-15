@@ -69,7 +69,7 @@
 	//	taglineOffesetTop = $('#cd-intro-tagline').offset().top + $('#cd-intro-tagline').height() + parseInt($('#cd-intro-tagline').css('paddingTop').replace('px', '')),
 		contentSections = $('.section');
 		var insideNav = nav.find('#nav');
-var topPos = $('.brand').offset().top+$('.brand').height()/2;
+var topPos = $('.brand').offset().top+$('.brand').height();
 		var navlogo = $('.nav-logo');
 
 
@@ -183,12 +183,50 @@ function scaleVideoContainer() {
     $('.title').css('height',unitHeight);
 		$('.title').css('width',unitWidth);
 
+
+
+
+	/*	if (brand.width() < 56*16) {
+			brand.removeAttr( 'style' );
+				hbrand = parseInt(brand.width() * 256 / 600);
+
+				brand.css('height',hbrand)
+		}*/
+
+		// resize brand
 		var brand = $('.brand');
-		var hbrand = parseInt((height - brand.height())/2).toString() + "px 2em";
+	 	var sec_height = parseInt((height - brand.height())/2).toString() + "px 2em";
 
-		console.log(hbrand);
+		brand.css('padding',sec_height);
 
-		brand.css('padding',hbrand);
+		// resize sections
+		var sections = [ $('#about'),  $('#games'),  $('#cinema') ];
+
+		for (var i = 0; i < sections.length; i++) {
+
+				var r = (height - sections[i].height()) / 2;
+
+				if (r < 32) {
+					sec_height= "3em 0";
+
+				} else {
+						//hbrand = "1em";
+							sec_height = parseInt(r).toString() + "px 0";
+				}
+					sections[i].css('padding',sec_height);
+
+		}
+
+		// brand holder
+		// 600px - 256px
+
+
+
+		//
+		//} else {
+		//		brand.css('width',280)
+		//		brand.css('height',119)
+		//}
 
 }
 
