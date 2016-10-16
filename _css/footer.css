@@ -42,6 +42,7 @@
 }
 
 .site-footer h2 {
+  text-transform: uppercase;
   font-size: 1.15em;
   margin-bottom: 1em;
 }

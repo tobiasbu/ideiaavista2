@@ -6,6 +6,7 @@
   text-align: center;
   padding: calc(100vh/2 - 210px) 2em;
   line-height: 0;
+  font-size: 1.2em;
 }
 
 .brand-holder {
@@ -38,7 +39,7 @@
   -moz-transform: translate(50%,50%);
   -ms-transform: translate(50%,50%);
   -o-transform: translate(50%,50%);
-  background: url('img/brand-svg.svg');
+  background: url('img/brand.svg');
   /*background-image: url('img/brand_logo.png');*/
   background-size: contain;
   background-repeat: no-repeat;
@@ -71,8 +72,6 @@
   background-position: 0;
   display: block;
   background-image: url('img/brand_logo.png');
-
-
 
   @media (--medium-up) {
     width: 623px;
@@ -113,9 +112,10 @@
   color: #fff;
   position: absolute;
   left: 48%;
-  bottom: 1.8em;
+  bottom: 8%;
   text-align: center;
   z-index: 3;
+  animation: pingPong 1s infinite ease;
 }
 
 .arrow-down__img {
@@ -123,6 +123,49 @@
   height: 30px;
   cursor: pointer;
 }
+
+@keyframes pingPong {
+    0% {
+        bottom: 8%;
+    }
+
+    50% {
+        bottom: 5%;
+    }
+
+    100% {
+        bottom: 8%;
+    };
+}
+
+@-moz-keyframes pingPong {
+    0% {
+        bottom: 8%;
+    }
+
+    50% {
+        bottom: 5%;
+    }
+
+    100% {
+        bottom: 8%;
+    };
+}
+
+@-webkit-keyframes pingPong {
+    0% {
+        bottom: 8%;
+    }
+
+    50% {
+        bottom: 5%;
+    }
+
+    100% {
+        bottom: 8%;
+    };
+}
+
 
 .arrow-down a {
   text-align: center;

@@ -1,6 +1,7 @@
 
 <div class="video-container widevideo">
-<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Flaserball2016%2Fvideos%2F594284824054190%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+<iframe src="https://player.vimeo.com/video/187491485" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/187491485">Laserball no Pub</a> from <a href="https://vimeo.com/user18296777">Beto Roa</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 </div>
 
 **Laserball** é uma mesa de jogo digital para dois jogadores. Um jogo fácil e intuitivo para se jogar entre amigos.

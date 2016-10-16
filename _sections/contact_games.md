@@ -10,5 +10,5 @@ Porto Alegre, RS - Brasil
 <br>
 Fones: (51)3287-2187 ou (51)3024-5942
 <br>
-game@ideiaavista.com.br
+beto@ideiaavista.com.br
 </address>

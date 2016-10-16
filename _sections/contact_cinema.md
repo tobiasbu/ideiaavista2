@@ -9,5 +9,5 @@ Beverly Hills, CA 90210
 <br>
 Ph: 310-276-5007
 <br>
- info@ostrowandcompany.com
+ info@ostrowandcompany.com ou beto@ideiaavista.com.br
 </address>
