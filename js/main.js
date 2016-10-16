@@ -257,11 +257,11 @@ function scaleVideoContainer() {
 				var r = (height - sections[i].height()) / 2;
 
 				if (r < 32) {
-					sec_height= "3em 0";
+					sec_height= "3.5em 0";
 
-				} else {
-						//hbrand = "1em";
-							sec_height = parseInt(r).toString() + "px 0";
+				} else  {
+						//hbrand = "1em";parseInt(r).toString()
+							sec_height =  160 + "px 0";
 				}
 					sections[i].css('padding',sec_height);
 
