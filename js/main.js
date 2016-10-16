@@ -1,11 +1,11 @@
 
 	jQuery(document).ready(function($) {
 
-		var body = $( "body" ),
+	/*	var body = $( "body" ),
 			content = $( '.content-wrap' ),
 			openbtn = $( '#open-button' ),
 			closebtn = $( '#close-button' ),
-			menuIsOpen = false;
+			menuIsOpen = false;*/
 
 		// Resive video
 	scaleVideoContainer();
@@ -135,12 +135,12 @@
 
 		if( menuIsOpen ) {
 
-			body.addClass( 'show-menu' );
+			/*body.addClass( 'show-menu' );*/
 			insideNav.find('ul').addClass('show-menu');
 			$(button).addClass('show-menu');
 		}
 		else {
-			body.removeClass( 'show-menu' );
+			/*body.removeClass( 'show-menu' );*/
 			insideNav.find('ul').removeClass('show-menu');
 			$(button).removeClass('show-menu');
 		}
@@ -197,9 +197,6 @@
 
 	function scrollTo(target) {
 
-
-						console.log("scol");
-
 						$('body,html').animate({
 							'scrollTop': target.offset().top - nav.height() + 1
 							}, 400
@@ -245,7 +242,7 @@ function scaleVideoContainer() {
 
 		// resize brand
 		var brand = $('.brand');
-	 	var sec_height = parseInt((height - brand.height())/2).toString() + "px 2em";
+	 	var sec_height = parseInt((height - brand.height())/2).toString() + "px 1em";
 
 		brand.css('padding',sec_height);
 
