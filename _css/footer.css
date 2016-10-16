@@ -31,15 +31,36 @@
     display: flex;
     margin-bottom: 3.5em;
     font-size: 0.85em;
+      @media (--medium-down) {
+        display: block;
+      }
 }
 
 .site-footer .col {
   width: 48%;
+
+  @media (--medium-down) {
+      width: 100%;
+      display: block;
+  }
+}
+@media (--medium-up) {
+  .site-footer .col:first-child{
+
+    margin-right: 4%;
+
+  }
 }
 
-.site-footer .col:first-child{
-  margin-right: 4%;
+@media (--medium-down) {
+  .site-footer .col:last-child{
+
+    margin-top: 2em;
+
+  }
 }
+
+
 
 .site-footer h2 {
   text-transform: uppercase;

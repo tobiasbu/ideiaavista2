@@ -8,7 +8,7 @@ Rua Washington Luiz, 675 Sala 1112 - Centro
 <br>
 Porto Alegre, RS - Brasil
 <br>
-Fones: (51)3287-2187 ou (51)3024-5942
+Fones: (51) 3241 4560 ou (51) 9246-0698
 <br>
 beto@ideiaavista.com.br
 </address>
