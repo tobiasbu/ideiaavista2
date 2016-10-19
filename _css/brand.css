@@ -1,26 +1,31 @@
 
 
 .brand {
-  position: relative;
-  z-index: 5;
+/*  position: relative;
   text-align: center;
-  padding: calc(100vh/2 - 210px) 2em;
+  padding: calc(100vh/2 - 210px) 2em;*/
+z-index: 5;
   line-height: 0;
   font-size: 1.2em;
 }
 
 .brand-holder {
-  margin-top: 1.5em;
+  max-width: 100%;
+  display: block;
+  /*margin-top: 1.5em;
   position: relative;
-  margin: auto;
-  max-width: 600px;
-  height: 268px;
-  @media (--medium-down) {
-    max-width: 100%;
-    height: 100%;
-    margin-top: 0;
-  }
+  margin: auto;*/
 }
+
+@media only screen and (--medium-up) {
+  .brand-holder {
+    width: 600px;
+    height: 260px;
+  }
+
+}
+
+
 
 .brand a {
   color: transparent;
