@@ -4,10 +4,10 @@
     <title>Ideia à Vista</title>
     <description>Uma produtora de cinema e games.
 </description>
-    <link>https://tobiasbu.github.io/ideiaavista2/</link>
-    <atom:link href="https://tobiasbu.github.io/ideiaavista2/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 16 Oct 2016 21:25:44 -0200</pubDate>
-    <lastBuildDate>Sun, 16 Oct 2016 21:25:44 -0200</lastBuildDate>
+    <link>http://ideiaavista.com.br/</link>
+    <atom:link href="http://ideiaavista.com.br/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 19 Oct 2016 14:21:52 -0200</pubDate>
+    <lastBuildDate>Wed, 19 Oct 2016 14:21:52 -0200</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
   </channel>

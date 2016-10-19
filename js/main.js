@@ -10,7 +10,7 @@
 			*/
 
 		// Resive video
-	scaleVideoContainer();
+	//scaleVideoContainer();
 
 	//initBannerVideoSize('.video-container .poster img');
 	//initBannerVideoSize('.video-container .filter');
@@ -18,7 +18,7 @@
 		var topPos = $( window ).height();
 
 	$(window).on('resize', function() {
-			scaleVideoContainer();
+			//scaleVideoContainer();
 			 topPos = $( window ).height();
 			//scaleBannerVideoSize('.video-container .poster img');
 			//scaleBannerVideoSize('.video-container .filter');
@@ -241,10 +241,10 @@ function scaleVideoContainer() {
 
     var height = $(window).height();
 		var width = $(window).width();
-    var unitHeight = parseInt(height) + 'px';
-		var unitWidth = parseInt(width) + 'px';
-    $('.title').css('height',unitHeight);
-		$('.title').css('width',unitWidth);
+    //var unitHeight = parseInt(height) + 'px';
+		//var unitWidth = parseInt(width) + 'px';
+    //$('.title').css('height',unitHeight);
+		//$('.title').css('width',unitWidth);
 
 
 
