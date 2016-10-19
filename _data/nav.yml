@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Quem Somos"
-    url: about.md
+    url: company.md
     content: true
 
   - title: "Games"

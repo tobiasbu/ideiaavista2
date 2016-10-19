@@ -15,7 +15,7 @@
   font-size: 1rem;
   font-weight: 600;
   margin: 0;
-  padding: 0.25em 0 0;
+
 
 }
 
@@ -109,9 +109,9 @@
 .nav-container {
 
   /*margin-top: calc(100vh - 4em - 2px);*/
-  background-color: #fff;
+  background-color: #fbfbfb;
   /*border-top: 1px solid rgba(159,176,201,0.3);*/
-  height: 64px;
+  height: 3.5em; /* 64px;*/
   box-shadow: -1px 2px 5px rgba(0,0,0,0.45);
   /*position: fixed;
   left: 0;
@@ -132,10 +132,14 @@
     width: 100%;
   }
 
+  #nav {
+    padding: 0.25em 0 0;
+  }
+
 #nav-top-margin {
   display: none;
   width: 100%;
-  height: 64px;
+  height: 3.5em;
 }
 
 #nav-top-margin.show {
@@ -255,14 +259,6 @@
 
 @media only screen and (--medium-down) {
 
-
-
-.content-wrap.show-menu {
-	-webkit-transition-delay: 0s;
-	transition-delay: 0s;
-	-webkit-transform: translate3d(0,125px,0);
-	transform: translate3d(0,125px,0);
-}
 
 .nav-button span {
   /* the span element is used to create the menu icon */

@@ -1,0 +1,46 @@
+
+.title {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.video-header {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image:url('img/mobile_brand_bg.png');
+    z-index: -3;
+}
+
+.video-header video {
+  position: absolute;
+  z-index: 0;
+
+  @media (--medium-down) {
+      display: none !important;
+  }
+
+}
+
+.video-header video.fillWidth {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  z-index: -2;
+}

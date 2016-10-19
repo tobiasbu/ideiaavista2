@@ -88,25 +88,6 @@
 
 }
 
-.brand-bg {
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  /*width: 100%;*/
-
-/*  background-image: url('img/brand_bg.png');*/
-  background-size: cover;
-  z-index: -10;
-  width: 100%;
-
-
-  @media (--medium-down) {
-    height: 100%;
-  }
-
-}
-
 
 .arrow-down {
   color: #fff;

@@ -6,21 +6,30 @@ layout: default
 
 {% include header.html %}
 
-<div class="wrapper">
+
 {% assign nav = site.data.nav["main"] %}
 {% for item in nav %}
 
 {% if !item.content %}
 {% if item.title != "Contato"  %}
-  <section id="{{item.url | remove: ".md" }}" class="section">
-  <h3>{{item.title}}</h3>
+{% if item.title == "Games"  %}
+  <section class="section section-games" id="{{item.url | remove: ".md" }}">
+      <div class="filter"></div>
+    {% else %}
+    <section class="section" id="{{item.url | remove: ".md" }}">
+        {% endif %}
+        <div class="inner-section">
+    <div class="wrapper">
+  <h2>{{item.title}}</h2>
     {% capture test %}{% include_relative _sections/{{item.url}} %}{% endcapture %}
     {{ test |  markdownify}}
+     </div>
+      </div>
     </section>
   {% endif %}
     {% endif %}
 {% endfor %}
- </div>
+
 
  {% include footer.html %}
 </main>

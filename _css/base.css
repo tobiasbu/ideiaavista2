@@ -45,13 +45,20 @@ button::-moz-focus-inner {
   border: 0;
 }
 
-h3 {
-  margin-bottom: 1em;
-  font-size: 1.65em;
+h2 {
+  margin-bottom: 0.8em;
+  font-size: 1.5em;
   display: block;
   font-weight: 600;
   text-transform: uppercase;
   /*line-height: 2.5em;*/
+}
+
+h3 {
+    margin-bottom: 0.8em;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.1em;
 }
 
 img {
@@ -61,7 +68,8 @@ img {
 .wrapper {
   max-width: 64rem;
   /*padding: 0 calc(50% - 480px);*/
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 1.5em;
   @media (--medium-down) {
       padding: 0 1em;
@@ -69,14 +77,8 @@ img {
 
 }
 
-/*
-.brand-wrapper {
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-
-  @media (--medium-down) {
-    height: 100vh;
-  }
-}*/
+.wrapper::after {
+    content: "";
+    display: table;
+    clear: both;
+}

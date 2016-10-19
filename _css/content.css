@@ -1,10 +1,5 @@
 
-.title {
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-}
+
 
 .site-content {
   position: absolute;
@@ -12,12 +7,97 @@
   width: 100%;
   height: auto;
   z-index: 3;
-  background: #fff;
+  background: #fbfbfb;
 }
 
 .section {
   position: relative;
   clear: both;
+
+  display: block;
+  /*  @media (--medium-down) {
+        padding: 4em 0;
+    }*/
+}
+
+.inner-section {
+    padding: 6em 0;
+}
+
+
+.box {
+
+  display: block;
+  text-align: center;
+  margin: 5em 0;
+
+@media (--medium-up) {
+  float: left;
+  margin: 0 0 2.75% 0;
+  width: calc((100% - (2.75%*2))/3);
+  padding-top: 3em;
+}
+}
+
+
+.box:last-child {
+    margin-right: 0;
+}
+
+
+.box h3.subtitle {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+
+.box svg {
+  width: 8em;
+  height: 8em;
+  background-color: transparent;
+
+@media (--medium-up) {
+  &:hover{
+        background-color: #1c2a69;
+  }
+
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+}
+
+.box-icon {
+    fill: #000;
+    @media (--medium-up) {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@media only screen and (--medium-up) {
+
+  .box p {
+    max-width: 12.5em;
+    margin: auto;
+  }
+
+  .box svg:hover .box-icon {
+      fill: #fff;
+  }
+
+}
+
+
+.section.section-games {
+  color: #fff;
+  background-image: url('img/games_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .section .row {
