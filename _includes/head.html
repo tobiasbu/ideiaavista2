@@ -21,15 +21,17 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
-
+{% if page.title == "Error 404" %}
+  <style> {% include css/style404.css %} </style>
+{% else %}
   <style> {% include css/style.css %} </style>
-
-<script type="text/javascript" src="{{ "js/modernizr.js" | prepend: site.baseurl }}"></script> <!-- Modernizr -->
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<!-- <script type="text/javascript" src="{{ "js/jquery.scrollTo.min.js" | prepend: site.baseurl }}"></script>-->
-<script type="text/javascript" src="{{ "js/main.js" | prepend: site.baseurl }}"></script>
+  <script type="text/javascript" src="{{ "js/modernizr.js" | prepend: site.baseurl }}"></script> <!-- Modernizr -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="{{ "js/main.js" | prepend: site.baseurl }}"></script>
+{% endif %}
 
 
+
+  <!-- <script type="text/javascript" src="{{ "js/jquery.scrollTo.min.js" | prepend: site.baseurl }}"></script>-->
 
 </head>

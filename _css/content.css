@@ -33,7 +33,7 @@
 
 @media (--medium-up) {
   float: left;
-  margin: 0 0 2.75% 0;
+  margin: 0 2.75% 0 0;
   width: calc((100% - (2.75%*2))/3);
   padding-top: 3em;
 }
@@ -98,6 +98,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  z-index: -1;
 }
 
 .section .row {

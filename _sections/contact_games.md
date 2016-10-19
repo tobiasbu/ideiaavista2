@@ -1,5 +1,5 @@
 
-<h2>Games:</h2>
+<h3>Games:</h3>
 
 <address>
 Cientec - Fundação de ciência e tecnologia

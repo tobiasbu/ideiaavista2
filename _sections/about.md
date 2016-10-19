@@ -1,23 +1,38 @@
 
-<div class="row">
-<div class="col">
+**Ideia à vista** é uma produtora brasileira, atualmente com representação nos EUA, direcionada para a **produção audiovisual de cinema**, **tv** e **games**.
 
-<p style="margin-top:4em">
-<strong>Ideia à vista</strong> é uma produtora brasileira, atualmente com representação nos EUA, direcionada para a <strong>produção audiovisual de cinema</strong>, <strong>tv</strong> e <strong>games</strong>.
-</p>
+<div class="box">
 
-<p style= "margin-top:4em">
-Fundada em abril de 2012 pelos sócios Beto Rôa e Renato M. Rôa, vem dedicando-se a estes objetivos, primando sempre pela qualidade de suas produções na busca de um equilíbrio entre identidade autoral e diálogo com o público.
-</p>
+{% include svg/cinema.html %}
 
+  <h3 class="subtitle">
+    Produção Audiovisual
+  </h3>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo ultricies vestibulum.
+  </p>
 </div>
 
-<div class="col-img">
-  <div id="img-about1">
-  <img src='img/about_beto.png'>
-    </div>
-    <div id="img-about2">
-  <img src='img/about_renato.png'>
-    </div>
-  </div>
+<div class="box">
+
+{% include svg/arcade.html %}
+
+<h3 class="subtitle">
+Arcade Machines
+</h3>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo ultricies vestibulum.
+</p>
+</div>
+
+<div class="box">
+
+{% include svg/games.html %}
+
+<h3 class="subtitle">
+Games
+</h3>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo ultricies vestibulum.
+</p>
 </div>
