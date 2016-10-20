@@ -10,7 +10,7 @@
 			*/
 
 		// Resive video
-	//scaleVideoContainer();
+	scaleVideoContainer();
 
 	//initBannerVideoSize('.video-container .poster img');
 	//initBannerVideoSize('.video-container .filter');
@@ -18,7 +18,7 @@
 		var topPos = $( window ).height();
 
 	$(window).on('resize', function() {
-			//scaleVideoContainer();
+			scaleVideoContainer();
 			 topPos = $( window ).height();
 			//scaleBannerVideoSize('.video-container .poster img');
 			//scaleBannerVideoSize('.video-container .filter');
@@ -247,20 +247,22 @@ function scaleVideoContainer() {
 		//$('.title').css('width',unitWidth);
 
 
+		/*var brand = $('.brand-holder');
 
-
-	/*	if (brand.width() < 56*16) {
+		if (brand.width() < 55*16) {
 			brand.removeAttr( 'style' );
-				hbrand = parseInt(brand.width() * 256 / 600);
+				hbrand = parseInt(brand.width() * 268 / 600);
 
 				brand.css('height',hbrand)
-		}*/
+	//	}*/
 
 		// resize brand
-		var brand = $('.brand');
+	/*	var brand = $('.brand');
 	 	var sec_height = parseInt((height - brand.height())/2).toString() + "px 1em";
 
-		brand.css('padding',sec_height);
+		brand.css('padding',sec_height);*/
+
+		/*	var sec_height =0;
 
 		// resize sections
 		var sections = [ $('#about'),  $('#games'),  $('#cinema') ];
@@ -278,7 +280,7 @@ function scaleVideoContainer() {
 				}
 					sections[i].css('padding',sec_height);
 
-		}
+		}*/
 
 		// brand holder
 		// 600px - 256px
