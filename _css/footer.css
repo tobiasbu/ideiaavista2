@@ -79,7 +79,7 @@ button, input, textarea {
 input, textarea {
   width: 100%;
   color: #000;
-  /*border: 1px solid #000;*/
+  border: 0;/*1px solid #000;*/
   outline: none;
   padding: 0.45em;
   border-radius: 0;
