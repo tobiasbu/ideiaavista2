@@ -3,6 +3,7 @@
 
 		var menuIsOpen = false;
 
+
 	/*	var body = $( "body" ),
 			content = $( '.content-wrap' ),
 			openbtn = $( '#open-button' ),
@@ -27,7 +28,7 @@
 
 
 	var nav = $('.nav-container'),
-			navTopPosition = nav.offset().top,
+			navTopPosition = nav.offset().scrollTop //nav.offset().top,
 	//	taglineOffesetTop = $('#cd-intro-tagline').offset().top + $('#cd-intro-tagline').height() + parseInt($('#cd-intro-tagline').css('paddingTop').replace('px', '')),
 		contentSections = $('.section');
 
