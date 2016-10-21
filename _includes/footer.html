@@ -1,30 +1,29 @@
-<section class="section" id="contact">
-  <footer class="site-footer">
+<section class="section section-contact" id="contact">
 <div class="filter"></div>
-  <div class="wrapper">
-  <div class="inner-footer">
-
+<div class="inner-section">
+<div class="wrapper">
 
     <h2>Contato</h2>
 
-    <div class="row">
-      <div class="col">
-        {% capture test %}{% include_relative _sections/contact_games.md %}{% endcapture %}
-        {{ test |  markdownify}}
-      </div>
-      <div class="col">
-        {% capture test %}{% include_relative _sections/contact_cinema.md %}{% endcapture %}
-        {{ test |  markdownify}}
-      </div>
-    </div>
+<div class="contact-row">
+    {% include contact-form.html %}
 
+
+    <div class="contact-box">
+      <div class="info">
+
+{% include_relative _sections/contact.html %}
+      </div>
     </div>
+  </div>
 
 
     <div class="legal">
     Copyright © 2016 . Ideia a Vista . Todos os direitos reservados
     </div>
     </div>
+    </div>
+    </section>
 
 <!--
     <h2 class="footer-heading">{{ site.title }}</h2>
@@ -42,8 +41,7 @@
         <p>{{ site.description }}</p>
       </div>
     </div>
-  -->
 
+ <address>
 
-</footer>
-</section>
+      </address> -->

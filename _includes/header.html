@@ -18,7 +18,7 @@
                 {% if item.content == false %}
                   <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ item.title }}</a></li>
                 {% else %}
-                  <li><a href="#{{item.url | remove: ".md"}}">{{ item.title }}</a></li>
+                  <li><a href="#{{item.url | remove: ".md" | remove: ".html"}}">{{ item.title }}</a></li>
                 {% endif %}
             {% endfor %}
             <li class="studio"><a href="http://ideiaestudiovirtual.com.br/" target="_blank">Estúdio Virtual</a></li>

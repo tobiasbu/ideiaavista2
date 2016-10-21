@@ -38,7 +38,7 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('__postcss', ['postcss']);
 
-  grunt.registerTask('default', 'Default Grunt Task', function() {
+  grunt.registerTask('default', 'CSS Task', function() {
 
      var target = grunt.option('target');
 
