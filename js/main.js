@@ -17,25 +17,35 @@
 	//initBannerVideoSize('.video-container .filter');
 	//initBannerVideoSize('.video-container video');
 		var topPos = $( window ).height();
+		var navBreak = $('#nav-top-margin');
+		var nav = $('.nav-container'),
+				navTopPosition = nav.offset().scrollTop //nav.offset().top,
+		//	taglineOffesetTop = $('#cd-intro-tagline').offset().top + $('#cd-intro-tagline').height() + parseInt($('#cd-intro-tagline').css('paddingTop').replace('px', '')),
+			contentSections = $('.section');
+				var insideNav = nav.find('#nav');
+					var navlogo = $('.nav-logo');
+		var oldWindowWidth = $(window).width();
 
 	$(window).on('resize', function() {
 			scaleVideoContainer();
 			 topPos = $( window ).height();
+
 			//scaleBannerVideoSize('.video-container .poster img');
 			//scaleBannerVideoSize('.video-container .filter');
 			//scaleBannerVideoSize('.video-container video');
+			if($(window).scrollTop() <= topPos ) {
+					if (nav.is('.is-fixed')) {
+						nav.removeClass('is-fixed');
+						navBreak.removeClass('show');
+						navlogo.removeClass('slide-in');
+					}
+			}
+			if (oldWindowWidth <= 55*16 && $(window).width() > 55*16) {
+					toggleMenu(true);
+			}
+
+			oldWindowWidth = $(window).width();
 	});
-
-
-	var nav = $('.nav-container'),
-			navTopPosition = nav.offset().scrollTop //nav.offset().top,
-	//	taglineOffesetTop = $('#cd-intro-tagline').offset().top + $('#cd-intro-tagline').height() + parseInt($('#cd-intro-tagline').css('paddingTop').replace('px', '')),
-		contentSections = $('.section');
-
-		var insideNav = nav.find('#nav');
-	//$('.brand').offset().top+$('.brand').height();
-		var navlogo = $('.nav-logo');
-			var navBreak = $('#nav-top-margin');
 
 
 	$(window).on('scroll', function() {
@@ -109,32 +119,15 @@
 		});
 	}
 
-	/*function init() {
-		initEvents();
-	}
-
-	function initEvents() {
-		openbtn.addEventListener( 'click', toggleMenu );
-		if( closebtn ) {
-			closebtn.addEventListener( 'click', toggleMenu );
-		}
-
-		// close the menu element if the target itÂ´s not the menu element or one of its descendants..
-		content.addEventListener( 'click', function(ev) {
-			var target = ev.target;
-			if( isOpen && target !== openbtn ) {
-				toggleMenu();
-			}
-		} );
-	}
-
-
-
-	init();*/
 
 	var button = $('.nav-button');
 
-	function toggleMenu() {
+	function toggleMenu(flag) {
+
+
+	if (flag !== undefined || flag !== null)
+		menuIsOpen = flag;
+
 
 		if( !menuIsOpen ) {
 
