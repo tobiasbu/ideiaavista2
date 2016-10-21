@@ -39,6 +39,12 @@
 						navBreak.removeClass('show');
 						navlogo.removeClass('slide-in');
 					}
+			} else {
+				if (!nav.is('.is-fixed')) {
+					navBreak.addClass('show');
+					nav.addClass('is-fixed');
+					navlogo.addClass('slide-in');
+				}
 			}
 			if (oldWindowWidth <= 55*16 && $(window).width() > 55*16) {
 					toggleMenu(true);
