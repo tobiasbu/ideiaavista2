@@ -131,8 +131,11 @@
 	function toggleMenu(flag) {
 
 
-	if (flag !== undefined || flag !== null)
-		menuIsOpen = flag;
+	if (flag === undefined  || flag === null) 
+			flag = null;
+	else
+			menuIsOpen = flag;
+
 
 
 		if( !menuIsOpen ) {
