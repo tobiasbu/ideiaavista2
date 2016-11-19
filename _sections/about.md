@@ -1,6 +1,8 @@
 
 **Ideia à vista** é uma produtora brasileira, atualmente com representação nos EUA, direcionada para a **produção audiovisual de cinema**, **tv** e **games**.
 
+Tendo a qualidade estética como premissa, buscamos sempre equilibrar identidade autoral e diálogo com o público consumidor.
+
 <div class="box">
 
 {% include svg/cinema.html %}
@@ -9,7 +11,7 @@
     Produção Audiovisual
   </h3>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo ultricies vestibulum.
+    Longa-metragens para o cinema e séries para tv/web.
   </p>
 </div>
 
@@ -21,7 +23,7 @@
 Arcade Machines
 </h3>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo ultricies vestibulum.
+Somos fabricantes e os criadores do conceito N.A.M. de arcade machines.
 </p>
 </div>
 
@@ -33,6 +35,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo ultricies
 Games
 </h3>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo ultricies vestibulum.
+Games casuais para PC, tablets e consoles.
 </p>
 </div>
