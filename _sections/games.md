@@ -9,4 +9,4 @@
 
 
 Utiliza materiais **nobres** em sua construção, tais como **madeiras certificadas** e camurças de **alta qualidade**, destacando-se também como mobília decorativa.
-Nosso desenvolvimento de games, conta com a elaboração tanto do softaware quanto do hardware.
+Nosso desenvolvimento de games conta com a elaboração tanto do softaware quanto do hardware.

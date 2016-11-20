@@ -11,7 +11,7 @@ email: flamenco.bluegrass@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Uma produtora de cinema e games.
 author: Tobias B. Ulrich
-baseurl: "/ideiaavista2" # the subpath of your site, e.g. /blog
+baseurl: "/ideiaavista2/" # the subpath of your site, e.g. /blog
 url: "https://tobiasbu.github.io" #"https://ideiaavista.com.br" #"http://ideiaavista.com.br" # the base hostname & protocol for your site
 
 repository: "tobiasbu/ideiaavista2"

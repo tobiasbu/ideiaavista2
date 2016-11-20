@@ -35,6 +35,6 @@ Somos fabricantes e os criadores do conceito N.A.M. de arcade machines.
 Games
 </h3>
 <p>
-Games casuais para PC, tablets e consoles.
+Games casuais para pc, tablets e consoles.
 </p>
 </div>
