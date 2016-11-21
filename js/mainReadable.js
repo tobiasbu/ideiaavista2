@@ -2,7 +2,7 @@
 	jQuery(document).ready(function($) {
 
 		var menuIsOpen = false;
-		var sendButton = $('button-contact-send');
+
 
 	/*	var body = $( "body" ),
 			content = $( '.content-wrap' ),
@@ -167,7 +167,6 @@
 	$('.arrow-down a').on('click', function(event){
 		event.preventDefault();
 
-
 		var target= $(this.hash);
 
 		scrollTo(target);
@@ -182,18 +181,17 @@
 			}, 400
 		);
 
-
 	});
 
 	//smooth scrolling when clicking on the secondary navigation items
 	nav.find('ul a').on('click', function(event){
-        event.preventDefault();
+				event.preventDefault();
 
-        var target= $(this.hash);
+				var target= $(this.hash);
 
 				scrollToNav(target, event);
 
-    });
+		});
 
 		function scrollToNav(target, event) {
 
@@ -216,21 +214,246 @@
 		$(button).removeClass('show-menu');
 		menuIsOpen = false;
 
-
 }
 
 	function scrollTo(target) {
-
 						$('body,html').animate({
 							'scrollTop': target.offset().top - nav.height() + 1
 							}, 400
 						);
 					//on mobile - close secondary navigation
 
+	}
+
+	//var triedToSend = false;
+	var invaliEmail = 0;
+	var invalidName = false;
+	var invalidMessage = false;
+	var inputContactName = $('#contact-name');
+	var inputContactEmail = $('#contact-email');
+	var inputContactMessage = $('#contact-message');
+
+inputContactName.on('input', function() {
+
+	//if (triedToSend) {
+
+		var value = this.value;
+
+		if (value.length < 1 || value === undefined)
+			setContactState('name',true);
+		else
+			setContactState('name',false);
+
+//	}
+
+});
+
+inputContactEmail.on('input', function() {
+
+	//if (triedToSend) {
+
+		var value = this.value;
+
+		if (value === undefined || value.length < 1)
+			setContactState('email',1);
+		else if (!validateEmail(value))
+			setContactState('email',2);
+		else
+			setContactState('email',0);
+
+	//}
+
+});
+
+inputContactMessage.on('input', function() {
+
+//	if (triedToSend) {
+
+		var value = this.value;
+
+		if (value.length >= 1 && value != undefined)
+			setContactState('message',false);
+		else
+			setContactState('message',true);
+
+//	}
+
+});
+
+function setContactState(property, state) {
+
+	if (property == 'name') {
+
+		invalidName = state;
+
+		if (state == false) { // not invalid
+				$('#contact-error-name').html(""); // <br>
+				inputContactName.removeClass('error');
+			//	inputContactName.prop('aria-invalid',false);
+		} else { // is invalid
+				$('#contact-error-name').html("* Digite o seu nome.");
+
+				if (!inputContactName.is('error'))
+					inputContactName.addClass('error');
+					//inputContactName.prop('aria-invalid',true);
+		}
+	} else if (property == 'email') {
+
+		invalidEmail = state;
+
+		if (state == 0)  // not invalid
+				$('#contact-error-email').html("");
+		else if (state == 1) // is not a email
+				$('#contact-error-email').html("* Digite o seu endereço de e-mail.");
+		else if (state == 2)  // is invalid email
+				$('#contact-error-email').html("* Digite um e-mail valido.");
+
+		if (state >= 1) {
+
+			if (!inputContactEmail.is('error'))
+				inputContactEmail.addClass('error');
+
+			//inputContactEmail.prop('aria-invalid',true);
+
+		} else {
+			inputContactEmail.removeClass('error');
+			//inputContactEmail.prop('aria-invalid',false);
+		}
+
+	} else if (property == 'message') {
+
+		invalidMessage = state;
+
+		if (state == false) { // not invalid
+				$('#contact-error-message').html("");
+				inputContactMessage.removeClass('error');
+				//inputContactMessage.prop('aria-invalid','false');
+		} else { // is invalid
+				$('#contact-error-message').html("* Digite a sua mensagem.");
+
+				if (!inputContactMessage.is('error'))
+					inputContactMessage.addClass('error');
+
+			//	inputContactMessage.prop('aria-invalid','true');
+		}
 
 	}
 
+}
 
+	$("#new_contact").submit(function(e) {
+    e.preventDefault();
+		//sendEmail();
+
+		var from_name = this['contact[name]'].value;
+		var from_email = this['contact[email]'].value;
+		var from_message = this['contact[message]'].value;
+
+
+
+		if (from_name === undefined || from_name.length < 1)
+			setContactState('name',true);
+		else
+			setContactState('name',false);
+
+		if (from_email === undefined || from_email.length < 1)
+			setContactState('email',1);
+		else if ( !validateEmail(from_email) )
+			setContactState('email',2);
+		else
+			setContactState('email',0);
+
+
+		if (from_message === undefined || from_message.length < 1)
+			setContactState('message',true);
+		else
+			setContactState('message',false);
+
+
+		//triedToSend = true;
+
+		if (invaliEmail == 0 && invalidName == false && invalidMessage == false) {
+
+			var packet = {
+				name : from_name,
+				email : from_email,
+				message : from_message
+			}
+
+			inputContactMessage.disabled = true;
+			inputContactName.disabled = true;
+			inputContactEmail.disabled = true;
+			$('.button-contact-send').disabled = true;
+			$('.button-contact-send span').text("Aguarde...");
+
+			inputContactMessage.addClass('send');
+			inputContactName.addClass('send');
+			inputContactEmail.addClass('send');
+			$('.button-contact-send').addClass('send');
+
+
+			/*console.log(packet);*/
+			$('#contact-error-main').css('display','none');
+
+
+			emailjs.send(
+			"gmail",
+			"template_GWvLYOYi",
+			packet)
+			.then(function(response) {
+				$('#contact-box-form').css('display','none');
+				$('#contact-box-sucess').css('display','block');
+			 //console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+			}, function(err) {
+			 //console.log("FAILED. error=", err);
+			 $('#contact-error-main').css('display','block');
+ 				resetContactForm(false,false);
+		 });
+
+		}
+
+		return false;
+	});
+
+	$('#contact-box-sucess span').on('click', function(event) {
+		event.preventDefault();
+
+		resetContactForm(true,true);
+
+
+
+	})
+
+	function resetContactForm(resetText,scroll) {
+		inputContactMessage.disabled = false;
+		inputContactName.disabled = false;
+		inputContactEmail.disabled = false;
+		$('.button-contact-send').disabled = false;
+		$('.button-contact-send span').text("Enviar");
+
+		inputContactMessage.removeClass('send');
+		inputContactName.removeClass('send');
+		inputContactEmail.removeClass('send');
+		$('.button-contact-send').removeClass('send');
+
+		invaliEmail = 0;
+		invalidName = false;
+		invalidMessage = false;
+
+		if (resetText) {
+			var $inputs = $('#new_contact :input');
+			$inputs.each(function() {
+				//console.log( $(this).val());
+				 $(this).val("");
+			});
+	}
+
+		$('#contact-box-form').css('display','block');
+		$('#contact-box-sucess').css('display','none');
+
+		if (scroll)
+			scrollTo($('#contact'));
+	}
 
 
     //on mobile - open/close primary navigation clicking/tapping the menu icon
@@ -242,6 +465,13 @@
 
 /** Reusable Functions **/
 /********************************************************************/
+
+
+function validateEmail(email) {
+	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(email);
+}
+
 
 // old functions
 function scaleVideoContainer() {

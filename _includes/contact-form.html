@@ -1,20 +1,41 @@
-<div class="contact-box">
+<div class="contact-box" >
 
-<p>Se você se interessou pelo nosso trabalho, envie uma mensagem:</p>
+  <div id="contact-box-form">
 
-<form accept-charset="UTF-8" onsubmit="sendEmail(this)" class="simple_form contact-form" data-remote="true" id="new_contact" method="post" novalidate="novalidate">
-  <div style="display:none">
-    <input name="utf8" type="hidden" value="✓">
+    <h2>Contato</h2>
+
+    <p>Se você se interessou pelo nosso trabalho, envie uma mensagem:</p>
+
+    <div id='contact-error-main' style='display:none; color:#fbe226'>
+      <p>&#9888; Ocorreu um erro ao enviar a mensagem.<br>Por favor tente mais tarde.</p>
+    </div>
+
+    <form accept-charset="UTF-8" class="contact-form" data-remote="true" id="new_contact" method="post" novalidate="novalidate">
+      <input type="name" name="contact[name]" aria-required="true" aria-invalid="false" autocomplete="off" read="false" placeholder="Nome" id="contact-name">
+      <input type="email" name="contact[email]" aria-required="true" aria-invalid="false" placeholder="E-mail" id="contact-email">
+      <textarea name="contact[message]" aria-required="true" aria-invalid="false" autocomplete="off" placeholder="Mensagem" id="contact-message" ></textarea>
+      <button type="submit" class="button-contact-send" data-disable-with="Aguarde...">
+        <span>Enviar</span>
+      </button>
+    </form>
+
+    <div class="contact-message-errors">
+      <label id="contact-error-name" class="error" for="contact-name">
+      </label>
+      <label id="contact-error-email" class="error" for="contact-email">
+      </label>
+      <label id="contact-error-message" class="error" for="contact-message">
+      </label>
+    </div>
   </div>
-  
-  <input type="text" name="contact[name]" placeholder="Nome" id="contact-name">
-  <input type="email" name="contact[email]" placeholder="E-mail" id="contact-email">
-  <textarea name="contact[message]" placeholder="Mensagem" id="contact-message"></textarea>
-  <button type="submit" class="button-contact-send" data-disable-with="Aguarde...">
-    <span>Enviar</span>
-  </button>
-</form>
+
+  <div id="contact-box-sucess">
+    <h3>Mensagem enviada com sucesso!</h3>
+    <p><span>Enviar outra mensagem</span></p>
+  </div>
 
 </div>
+
+
 
 <!-- action="/contacts"-->

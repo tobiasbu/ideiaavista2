@@ -1,15 +1,21 @@
 
 
 .section.section-contact {
+
   color: #fff;
   background-image: url('img/footer_bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   z-index: -1;
+  @media (--medium-up) {
+    min-height: 48em;
+  }
   @media (--medium-down) {
+
       background-position: 100% 50%;
   }
+
 }
 
 /*.site-footer {
@@ -79,13 +85,14 @@ button, input, textarea {
 input, textarea {
   width: 100%;
   color: #000;
-  border: 0;/*1px solid #000;*/
+  border: 2px solid #fbfbfb;
   outline: none;
   padding: 0.45em;
   border-radius: 0;
 }
 
 input {
+  line-height: normal;
   margin-bottom: 1em;
 }
 
@@ -94,14 +101,32 @@ textarea {
   height: 10em;
 }
 
+input.error, textarea.error {
+  border: 2px solid #ef221a;
+  color: #ef221a;
+}
 
+input.send, textarea.send {
+  border: 2px solid #d8d8d8;
+  color: #7d7d7d;
+  background: #d8d8d8;
+}
+
+.button-contact-send.send {
+  background-color: #1c2a69;
+  cursor: default;
+}
 
 .button-contact-send {
 
   float: none;
+  padding: 0.6em 1.8em;/*0.45em 1.8em;*/
+  margin-top: 0.5em;
   width: 100%;
-  padding: 0.45em 1.8em;
-    margin-top: 0.5em;
+
+  &:active {
+     background-color: #222f69;
+  }
 
 }
 
@@ -109,19 +134,23 @@ textarea {
   text-transform: uppercase;
   font-weight: 600;
   color: #000;
-
-  &:active {
-     background-color: #222f69;
-  }
 }
 
-@media (--medium-up) {
+.button-contact-send.send span {
+  color: #fff;
+}
+
+.button-contact-send:active span {
+  color: #d2d2d2;
+}
+
+@media only screen and (--medium-up) {
 
   .button-contact-send {
     -webkit-transition: background-color 0.1s ease-in-out;
     -moz-transition: background-color 0.1s ease-in-out;
     transition: background-color 0.1s ease-in-out;
-
+    width: auto;
     float: right;
     &:hover{
        background-color: #1c2a69;
@@ -133,16 +162,44 @@ textarea {
     color: #fff;
   }
 
-  .button-contact-send:active span {
-    color: #d2d2d2;
-  }
-
 }
 
+.contact-message-errors {
+  position: relative;
+  /*bottom: 2.8125em;*/
+  top: 0.5em;
+  line-height: normal;
+  z-index: -1;
+}
 
+.contact-message-errors label.error {
+  color: #fbfbfb;
+  font-size: 0.875rem;
+  display: block;
+}
+
+#contact-box-sucess {
+  display: none;
+
+  text-align: center;
+  @media (--medium-up) {
+  margin-top: 9em;
+}
+}
+
+#contact-box-sucess span {
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#contact-box-sucess span:hover {
+  color: #7183d2;
+}
 
 .address {
-  margin: 0.8em 0 0 0;
+  margin: 0;/*0.8em 0 0 0;*/
+  font-size: 0.9em;
 }
 
 .address span {
@@ -151,6 +208,7 @@ textarea {
 
 .ideia-adr {
   margin-bottom: 0;
+  font-size: 1em;
 }
 
 .legal {
