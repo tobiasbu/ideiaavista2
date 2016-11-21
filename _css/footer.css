@@ -94,22 +94,52 @@ textarea {
   height: 10em;
 }
 
-.button-contact-send {
-  margin-top: 0.5em;
-  padding: 0.45em 1.8em;
 
-  float: right;
-  @media (--medium-down) {
-    float: none;
-    width: 100%;
-  }
+
+.button-contact-send {
+
+  float: none;
+  width: 100%;
+  padding: 0.45em 1.8em;
+    margin-top: 0.5em;
+
 }
 
 .button-contact-send span {
   text-transform: uppercase;
   font-weight: 600;
   color: #000;
+
+  &:active {
+     background-color: #222f69;
+  }
 }
+
+@media (--medium-up) {
+
+  .button-contact-send {
+    -webkit-transition: background-color 0.1s ease-in-out;
+    -moz-transition: background-color 0.1s ease-in-out;
+    transition: background-color 0.1s ease-in-out;
+
+    float: right;
+    &:hover{
+       background-color: #1c2a69;
+    }
+
+  }
+
+  .button-contact-send:hover span {
+    color: #fff;
+  }
+
+  .button-contact-send:active span {
+    color: #d2d2d2;
+  }
+
+}
+
+
 
 .address {
   margin: 0.8em 0 0 0;

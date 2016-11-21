@@ -2,7 +2,7 @@
 	jQuery(document).ready(function($) {
 
 		var menuIsOpen = false;
-
+		var sendButton = $('button-contact-send');
 
 	/*	var body = $( "body" ),
 			content = $( '.content-wrap' ),
@@ -25,6 +25,7 @@
 				var insideNav = nav.find('#nav');
 					var navlogo = $('.nav-logo');
 		var oldWindowWidth = $(window).width();
+
 
 	$(window).on('resize', function() {
 			scaleVideoContainer();
@@ -131,7 +132,7 @@
 	function toggleMenu(flag) {
 
 
-	if (flag === undefined  || flag === null) 
+	if (flag === undefined  || flag === null)
 			flag = null;
 	else
 			menuIsOpen = flag;
@@ -154,6 +155,8 @@
 		}
 
 	}
+
+
 
 	//on mobile - open/close secondary navigation clicking/tapping the .cd-secondary-nav-trigger
 	button.on('click', function(event){
@@ -240,6 +243,12 @@
 /** Reusable Functions **/
 /********************************************************************/
 
+// send email
+function sendEmail(form) {
+	console.log("oi");
+}
+
+// old functions
 function scaleVideoContainer() {
 
     var height = $(window).height();

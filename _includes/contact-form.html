@@ -2,11 +2,19 @@
 
 <p>Se você se interessou pelo nosso trabalho, envie uma mensagem:</p>
 
-<form accept-charset="UTF-8" action="/contacts" class="simple_form contact-form" data-remote="true" id="new_contact" method="post" novalidate="novalidate"><div style="display:none"><input name="utf8" type="hidden" value="✓"></div>
+<form accept-charset="UTF-8" onsubmit="sendEmail(this)" class="simple_form contact-form" data-remote="true" id="new_contact" method="post" novalidate="novalidate">
+  <div style="display:none">
+    <input name="utf8" type="hidden" value="✓">
+  </div>
+  
   <input type="text" name="contact[name]" placeholder="Nome" id="contact-name">
   <input type="email" name="contact[email]" placeholder="E-mail" id="contact-email">
   <textarea name="contact[message]" placeholder="Mensagem" id="contact-message"></textarea>
-  <button type="submit" class="button-contact-send" data-disable-with="Aguarde..."><span>Enviar</span></button>
+  <button type="submit" class="button-contact-send" data-disable-with="Aguarde...">
+    <span>Enviar</span>
+  </button>
 </form>
 
 </div>
+
+<!-- action="/contacts"-->
